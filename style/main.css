@@ -48,6 +48,9 @@ header {
   justify-content: space-between;
   padding: 15px 20px;
 }
+.navbar .toggle-bar {
+  display: none;
+}
 .navbar .logo {
   color: #fff;
   font-family: newspaper;
@@ -111,7 +114,7 @@ header {
   margin: 20px;
 }
 .clients .client-wrap .client-card .image {
-  background: url(/assets/images/paper.jpg);
+  background: url(/assets/images/paper.png);
   padding: 15px;
   border-radius: 50%;
   display: flex;
@@ -287,16 +290,95 @@ header {
   width: 40%;
 }
 .about-us .wrap .right img {
+  outline: 4px solid #c3c3c3;
   width: 100%;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+.gallery img {
+  max-width: 100%;
+  display: block;
+}
+.gallery figure {
+  margin: 0;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  margin-bottom: 10px;
+  -moz-column-break-inside: avoid;
+       break-inside: avoid;
+}
+.gallery figure > img {
+  grid-row: 1/-1;
+  grid-column: 1;
+}
+.gallery figure a {
+  color: black;
+  text-decoration: none;
+}
+.gallery figcaption {
+  grid-row: 2;
+  grid-column: 1;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0.2em 0.5em;
+  justify-self: start;
+}
+.gallery .container {
+  -moz-column-count: 4;
+       column-count: 4;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+  max-width: 1200px;
 }
 
 @media (max-width: 768px) {
   .navbar nav {
+    transition: 0.3s;
+    background-color: #161616;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    top: 58px;
+    position: absolute;
+    width: 60%;
+    right: -100%;
+    height: 100vh;
+    text-align: center;
+  }
+  .navbar nav ul {
+    flex-direction: column;
+  }
+  .navbar nav ul li {
+    padding: 20px 0;
+  }
+  .navbar nav ul li a {
+    font-family: durk-bold;
+    font-size: 26px;
+  }
+  .navbar .toggle-bar {
+    position: absolute;
+    right: 20px;
+    color: #fff;
+    display: block;
+  }
+  .navbar .toggle-bar i {
+    font-size: 20px;
+  }
+  .navbar.active nav {
+    right: 0;
+  }
+  .navbar.active .fa-bars:before {
+    content: "\f00d";
+  }
+  .navbar .social-media {
     display: none;
   }
   .banner {
     text-align: center;
     padding: 20px 40px;
+    height: 50vh;
   }
   .banner h1 {
     font-size: 60px;
@@ -338,8 +420,12 @@ header {
     margin-top: 30px;
     padding: 0;
   }
+  .gallery .container {
+    -moz-column-count: 3;
+         column-count: 3;
+  }
 }
-@media (max-width: 425px) {
+@media (max-width: 585px) {
   .common-section-2 {
     padding: 20px 10px;
   }
@@ -359,8 +445,15 @@ header {
   .common-section-2 .wrap .right .input-wrapper textarea {
     width: calc(100% - 20px);
   }
+  .common-section-2.about-us .wrap {
+    width: 80%;
+  }
   .common-section .wrap .left ul li {
     font-size: 20px;
     line-height: 50px;
+  }
+  .gallery .container {
+    -moz-column-count: 2;
+         column-count: 2;
   }
 }/*# sourceMappingURL=main.css.map */

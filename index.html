@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phruniverse</title>
     <link rel="stylesheet" href="/style/main.css">
@@ -22,6 +23,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/about/">About</a></li>
                     <li><a href="/services/">Services</a></li>
+                    <li><a href="/gallery/">Gallery</a></li>
                     <li><a href="/contact/">Contact</a></li>
                 </ul>
             </nav>
@@ -31,6 +33,9 @@
                     <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
                     <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
                 </ul>
+            </div>
+            <div onclick="toggleNav()" class="toggle-bar">
+                <i class="fa-solid fa-bars"></i>
             </div>
         </div>
     </header>
@@ -43,25 +48,25 @@
     <div class="clients">
         <h4 class="section-heading">Our Clients</h4>
         <div class="client-wrap">
-            <div class="client-card">
+            <div data-aos="fade-up" class="client-card">
                 <div class="image">
                     <img src="https://placehold.co/120" alt="">
                 </div>
                 <div class="name">Client</div>
             </div>
-            <div class="client-card">
+            <div data-aos="fade-up" class="client-card">
                 <div class="image">
                     <img src="https://placehold.co/120" alt="">
                 </div>
                 <div class="name">Client</div>
             </div>
-            <div class="client-card">
+            <div data-aos="fade-up" class="client-card">
                 <div class="image">
                     <img src="https://placehold.co/120" alt="">
                 </div>
                 <div class="name">Client</div>
             </div>
-            <div class="client-card">
+            <div data-aos="fade-up" class="client-card">
                 <div class="image">
                     <img src="https://placehold.co/120" alt="">
                 </div>
@@ -70,24 +75,24 @@
         </div>
     </div>
     <div class="featured-video">
-        <video src="/assets/images/1684162411043.mp4"></video>
+        <video autoplay muted loop src="/assets/images/1684162411043.mp4"></video>
     </div>
     <div class="common-section">
         <div class="section-heading">What We Do</div>
         <div class="wrap">
             <div class="left">
                 <ul>
-                    <li>VIDEOGRAPHY</li>
-                    <li>MUSIC</li>
-                    <li>PRODUCTION</li>
-                    <li>PHOTOGRAPHY</li>
-                    <li>DESIGN</li>
-                    <li>SOCIAL MEDIA</li>
-                    <li>STRATEGY</li>
+                    <li data-aos-delay="100" data-aos="fade-right">VIDEOGRAPHY</li>
+                    <li data-aos-delay="200" data-aos="fade-right">MUSIC</li>
+                    <li data-aos-delay="300" data-aos="fade-right">PRODUCTION</li>
+                    <li data-aos-delay="400" data-aos="fade-right">PHOTOGRAPHY</li>
+                    <li data-aos-delay="500" data-aos="fade-right">DESIGN</li>
+                    <li data-aos-delay="600" data-aos="fade-right">SOCIAL MEDIA</li>
+                    <li data-aos-delay="700" data-aos="fade-right">STRATEGY</li>
                 </ul>
             </div>
             <div class="right">
-                <img src="/assets/images/camera2.jpg" alt="">
+                <img src="/assets/images/camera2.png" alt="">
             </div>
         </div>
     </div>
@@ -143,6 +148,11 @@
     <footer>
 
     </footer>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="/scripts/main.js"></script>
 </body>
 
 </html>
