@@ -90,6 +90,18 @@ header {
     }
 }
 
+.page-heading {
+    padding: 40px 0;
+    background: url(/assets/images/background.jpg);
+    h1 {
+        font-family: handwriting;
+        font-size: 30px;
+        font-weight: normal;
+        color: #fff;
+        text-align: center;
+    }
+}
+
 .banner {
     height: 80vh;
     background: url(/assets/images/camera.png);
@@ -180,20 +192,34 @@ header {
 
         .left {
             width: 50%;
+            display: flex;
+            align-items: center;
 
             ul {
+                display: flex;
+                flex-direction: column;
+
                 li {
                     list-style-type: none;
-                    font-family: durk-bold;
-                    cursor: pointer;
-                    transition: 0.4s;
-                    font-size: 40px;
-                    line-height: 70px;
 
-                    &:hover {
-                        color: #ffffffc2;
-                        scale: 0.9;
+                    button {
+                        cursor: pointer;
+                        color: #fff;
+                        font-family: durk-bold;
+                        transition: 0.4s;
+                        font-size: 40px;
+                        line-height: 70px;
+                        background-color: transparent;
+                        border: none;
+                        outline: none;
+                        text-align: left;
+
+                        &:hover {
+                            color: #ffffffc2;
+                            scale: 0.9;
+                        }
                     }
+
                 }
             }
         }
@@ -393,6 +419,14 @@ header {
     }
 }
 
+.video-wrap {
+    padding: 30px 10px;
+
+    .section-heading {
+        text-align: center;
+    }
+}
+
 @media (max-width:768px) {
 
     .navbar {
@@ -483,9 +517,16 @@ header {
             }
 
             .left {
-                ul li {
-                    text-align: center;
-                    font-size: 30px;
+                ul {
+                    width: 100%;
+
+                    li {
+                        button {
+                            width: 100%;
+                            text-align: center;
+                            font-size: 30px;
+                        }
+                    }
                 }
             }
 
@@ -561,9 +602,15 @@ header {
 
     }
 
-    .common-section .wrap .left ul li {
-        font-size: 20px;
-        line-height: 50px;
+    .common-section .wrap {
+        width: 100%;
+
+        .left ul li {
+            button {
+                font-size: 20px;
+                line-height: 50px;
+            }
+        }
     }
 
     .gallery .container {

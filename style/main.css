@@ -78,6 +78,18 @@ header {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.page-heading {
+  padding: 40px 0;
+  background: url(/assets/images/background.jpg);
+}
+.page-heading h1 {
+  font-family: handwriting;
+  font-size: 30px;
+  font-weight: normal;
+  color: #fff;
+  text-align: center;
+}
+
 .banner {
   height: 80vh;
   background: url(/assets/images/camera.png);
@@ -160,16 +172,29 @@ header {
 }
 .common-section .wrap .left {
   width: 50%;
+  display: flex;
+  align-items: center;
+}
+.common-section .wrap .left ul {
+  display: flex;
+  flex-direction: column;
 }
 .common-section .wrap .left ul li {
   list-style-type: none;
-  font-family: durk-bold;
+}
+.common-section .wrap .left ul li button {
   cursor: pointer;
+  color: #fff;
+  font-family: durk-bold;
   transition: 0.4s;
   font-size: 40px;
   line-height: 70px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  text-align: left;
 }
-.common-section .wrap .left ul li:hover {
+.common-section .wrap .left ul li button:hover {
   color: rgba(255, 255, 255, 0.7607843137);
   scale: 0.9;
 }
@@ -334,6 +359,13 @@ header {
   max-width: 1200px;
 }
 
+.video-wrap {
+  padding: 30px 10px;
+}
+.video-wrap .section-heading {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .navbar nav {
     transition: 0.3s;
@@ -400,7 +432,11 @@ header {
   .common-section .wrap .right {
     width: 100%;
   }
-  .common-section .wrap .left ul li {
+  .common-section .wrap .left ul {
+    width: 100%;
+  }
+  .common-section .wrap .left ul li button {
+    width: 100%;
     text-align: center;
     font-size: 30px;
   }
@@ -448,7 +484,10 @@ header {
   .common-section-2.about-us .wrap {
     width: 80%;
   }
-  .common-section .wrap .left ul li {
+  .common-section .wrap {
+    width: 100%;
+  }
+  .common-section .wrap .left ul li button {
     font-size: 20px;
     line-height: 50px;
   }
